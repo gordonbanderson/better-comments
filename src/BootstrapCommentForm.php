@@ -14,26 +14,30 @@ use SilverStripe\Comments\Forms\CommentForm;
 
 class BootstrapCommentForm extends CommentForm
 {
+    /**
+     * BootstrapCommentForm constructor.  Extend the standard CommentForm class and add extra functionality
+     * @param $name
+     * @param CommentingController $controller
+     */
     public function __construct($name, CommentingController $controller)
     {
         parent::__construct($name, $controller);
-        error_log('*** BCF ****');
         $this->convertToBootStrap();
     }
 
+    /**
+     * Add bootstrap classes to the form fields
+     */
     private function convertToBootStrap()
     {
-        error_log('OVERRIDE FORM METHOD');
-        $fields = $this->Fields();        /**
-         */
+        $fields = $this->Fields();
+
+        // the comments form is in a composite field.  Add form-control to allow fields full width, and mb-4 for padding
         foreach($fields as $field)
         {
-            error_log('FIELD!');
-            error_log(get_class($field));
             $clazz = get_class($field);
 
             if ("{$clazz}" == 'SilverStripe\Forms\CompositeField') {
-                error_log('COMPOSITE');
                 /** @var CompositeField $compositeFields */
                 $compositeFields = $field;
 
@@ -45,9 +49,9 @@ class BootstrapCommentForm extends CommentForm
             }
         }
 
+        // make actions primary, here the submit button
         $actionFields = $this->Actions();
         foreach($actionFields as $actionField) {
-            error_log('ACTION: ' . $actionField->getName());
             $actionField->addExtraClass('float-sm-right');
             $actionField->addExtraClass('btn');
             $actionField->addExtraClass('btn-primary');
