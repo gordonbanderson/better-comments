@@ -1,0 +1,6 @@
+---
+name: bettercomments
+---
+SilverStripe\Core\Injector\Injector:
+  SilverStripe\Comments\Forms\CommentForm:
+    class: Suilven\BetterComments\BootstrapCommentForm
