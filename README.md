@@ -7,22 +7,8 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-**Note:** Replace ```Gordon Anderson``` ```gordonbanderson``` ```https://github.com/gordonbanderson``` ```gordon.b.anderson@gmail.com``` ```suilven``` ```commentsfixes``` ```Overrides of the SilverStripe comments module to facilitate Bootstrap forms``` with their correct values in [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](CONTRIBUTING.md), [LICENSE.md](LICENSE.md) and [composer.json](composer.json) files, then delete this line. You can run `$ php prefill.php` in the command line to make all replacements at once. Delete the file prefill.php as well.
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
-
-## Structure
-
-If any of the following are applicable to your project, then the directory structure should follow industry best practices by being named the following.
-
-```
-bin/        
-config/
-src/
-tests/
-vendor/
-```
+Work in progress - overrides comments form to provide Bootstrapped version
 
 
 ## Install
@@ -33,22 +19,9 @@ Via Composer
 $ composer require suilven/commentsfixes
 ```
 
-## Usage
-
-``` php
-$skeleton = new Suilven\CommentsOverride();
-echo $skeleton->echoPhrase('Hello, League!');
-```
-
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
-
-## Testing
-
-``` bash
-$ composer test
-```
 
 ## Contributing
 
